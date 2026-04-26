@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakura Shop — аніме магазин</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" rel="style.css">
+
+
+</head>
+<body>
+
+  <!-- Cart toggle -->
+  <input type="checkbox" class="cart-toggle" id="cartToggle">
+  <div class="cart-overlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <span class="cart-title">Кошик</span>
+        <label for="cartToggle" class="cart-close" style="cursor:pointer;">✕</label>
+      </div>
+      <div class="cart-item">
+        <div class="cart-item-img">🌸</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">Фігурка Sakura</div>
+          <div class="cart-item-series">Cardcaptor Sakura</div>
+          <div class="cart-item-price">₴890</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <div class="cart-item-img">⚔️</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">Меч-репліка</div>
+          <div class="cart-item-series">Demon Slayer</div>
+          <div class="cart-item-price">₴1 240</div>
+        </div>
+      </div>
+      <div class="cart-total">
+        <span>Разом</span>
+        <span>₴2 130</span>
+      </div>
+      <a href="#" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:1rem;">Оформити
+        замовлення</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo">桜 <span>Sakura</span> Shop</a>
+    <nav>
+      <a href="#categories">Категорії</a>
+      <a href="products.html">Товари</a>
+      <a href="new.htnml">Новинки</a>
+      <a href="#">Про нас</a>
+    </nav>
+    <div class="nav-icon">
+      <a href="#">Пошук ↗</a>
+      <label for="cartToggle" style="cursor:pointer;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--fog);transition:color 0.3s;" data-tip="2 товари">
+      Кошик (2)
+    </label>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <span class="hero-label">Новинки сезону</span>
+      <h1 class="hero-title">Твій світ<br><em>аніме</em><br>починається тут</h1>
+      <p class="hero-sub">Фігурки, мерч, мангa та аксесуари від улюблених серій. Доставка по всій Україні.</p>
+      <div>
+        <a href="#products" class="btn-primary">Переглянути каталог</a>
+        <a href="#new" class="btn-outline">Новинки</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <span class="hero-bg-text">桜</span>
+      <div class="hero-card">
+        <div class="hero-product-img">🌸</div>
+        <div class="hero-product-label">Фігурка місяця</div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">1 200+</span>
+          <span class="stat-lbl">Товарів</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">48+</span>
+          <span class="stat-lbl">Серій</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="marquee-dot"></span>Безкоштовна доставка від 1500 грн</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Нові надходження щотижня</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Оригінальна японська продукція</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Гарантія автентичності</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Безкоштовна доставка від 1500 грн</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Нові надходження щотижня</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Оригінальна японська продукція</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Гарантія автентичності</span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section id="categories">
+    <div class="section-label">Асортимент</div>
+    <div class="section-title">Категорії</div>
+    <div class="categories-grid">
+      <a href="#" class="cat-card">
+        <div class="cat-overlay"></div>
+        <span class="cat-emoji">🗿</span>
+        <span class="cat-name">Фігурки</span>
+        <span class="cat-count">340 товарів</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-overlay"></div>
+        <span class="cat-emoji">📚</span>
+        <span class="cat-name">Манґа</span>
+        <span class="cat-count">210 томів</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-overlay"></div>
+        <span class="cat-emoji">👕</span>
+        <span class="cat-name">Одяг</span>
+        <span class="cat-count">180 позицій</span>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-overlay"></div>
+        <span class="cat-emoji">🎌</span>
+        <span class="cat-name">Аксесуари</span>
+        <span class="cat-count">420 товарів</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PRODUCTS with TABS (CSS only) -->
+  <section id="products" class="products-section">
+    <div class="products-header">
+      <div>
+        <div class="section-label">Каталог</div>
+        <div class="section-title">Популярні товари</div>
+      </div>
+      <a href="#" class="see-all">Всі товари →</a>
+    </div>
+
+    <input type="radio" name="tabs" id="tab1" class="tab-radio" checked>
+    <input type="radio" name="tabs" id="tab2" class="tab-radio">
+    <input type="radio" name="tabs" id="tab3" class="tab-radio">
+
+    <div class="tabs-nav">
+      <label for="tab1" class="tab-label lbl1">Всі</label>
+      <label for="tab2" class="tab-label lbl2">Фігурки</label>
+      <label for="tab3" class="tab-label lbl3">Манґа</label>
+    </div>
+
+    <div class="tab-content">
+      <!-- TAB 1 -->
+      <div class="tab-panel panel1">
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="product-badge">Хіт</span>
+            <span class="product-wishlist">♡</span>
+            🌸
+          </div>
+          <div class="product-name">Фігурка Jinshi</div>
+          <div class="product-series">he Apothecary Diaries</div>
+          <div class="product-price"><s>₴1 200</s> ₴890</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="product-wishlist">♡</span>
+            ⚔️
+          </div>
+          <div class="product-name">Меч Tanjiro Kamado</div>
+          <div class="product-series">Demon Slayer</div>
+          <div class="product-price">₴1 240</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="product-badge">Новинка</span>
+            <span class="product-wishlist">♡</span>
+            🦊
+          </div>
+          <div class="product-name">Фігурка Naruto Uzumaki</div>
+          <div class="product-series">Naruto Shippuden</div>
+          <div class="product-price">₴760</div>
+        </a>
+      </div>
+      <!-- TAB 2 -->
+      <div class="tab-panel panel2">
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="product-badge">Хіт</span>
+            <span class="product-wishlist">♡</span>
+            🌸
+          </div>
+          <div class="product-name">Фігурка Sakura</div>
+          <div class="product-series">Cardcaptor Sakura</div>
+          <div class="product-price">₴890</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="product-wishlist">♡</span>
+            🤖
+          </div>
+          <div class="product-name">Фігурка Gundam RX-78</div>
+          <div class="product-series">Mobile Suit Gundam</div>
+          <div class="product-price">₴2 100</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="product-wishlist">♡</span>
+            🦊
+          </div>
+          <div class="product-name">Senkuu Ishigami — колекційна</div>
+          <div class="product-series">Naruto Shippuden</div>
+          <div class="product-price">₴1760</div>
+        </a>
+      </div>
+      <!-- TAB 3 -->
+      <div class="tab-panel panel3">
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="product-badge">Новинка</span>
+            <span class="product-wishlist">♡</span>
+            📖
+          </div>
+          <div class="product-name">The Apothecary Diaries том 1–3</div>
+          <div class="product-series">Kentaro Miura</div>
+          <div class="product-price">₴1 450</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="product-wishlist">♡</span>
+            📗
+          </div>
+          <div class="product-name">Attack on Titan Box Set</div>
+          <div class="product-series">Hajime Isayama</div>
+          <div class="product-price">₴3 200</div>
+        </a>
+        <a href="#" class="product-card">
+          <div class="product-img">
+            <span class="product-wishlist">♡</span>
+            📕
+          </div>
+          <div class="product-name">Dr. STONE том 1</div>
+          <div class="product-series">Eiichiro Oda</div>
+          <div class="product-price">₴280</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER -->
+  <div class="banner" id="new">
+    <div>
+      <div class="banner-label">Спеціальна пропозиція</div>
+      <h2 class="banner-title">Передзамовлення<br>Demon Slayer — Season 4</h2>
+      <p class="banner-sub">Оформи передзамовлення на ексклюзивну колекцію фігурок Hashira Training Arc. Лімітований
+        випуск — лише 200 комплектів.</p>
+      <br><br>
+      <a href="#" class="btn-light">Передзамовити</a>
+    </div>
+    <div class="banner-right">
+      <span class="banner-emoji">⚔️</span>
+      <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);">
+        Залишилось 87 місць</div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <div class="section-label">Клуб</div>
+    <div class="section-title">Підписка на розсилку</div>
+    <p>Отримуй першим інформацію про нові надходження, розпродажі та ексклюзивні пропозиції для підписників.</p>
+    <div class="email-row">
+      <input type="email" placeholder="твій@email.com">
+      <button type="button">Підписатись</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">桜 <span>Sakura</span> Shop</a>
+        <p class="footer-desc">Офіційний аніме магазин в Україні. Оригінальна продукція з Японії. З любов'ю до аніме з
+          2019 року.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Магазин</h4>
+        <ul>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Новинки</a></li>
+          <li><a href="#">Розпродаж</a></li>
+          <li><a href="#">Передзамовлення</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Інформація</h4>
+        <ul>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Повернення</a></li>
+          <li><a href="#">Гарантія</a></li>
+          <li><a href="#">Контакти</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Серії</h4>
+        <ul>
+          <li><a href="#">Naruto</a></li>
+          <li><a href="#">One Piece</a></li>
+          <li><a href="#">Demon Slayer</a></li>
+          <li><a href="#">Attack on Titan</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Sakura Shop. Всі права захищено.</span>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
