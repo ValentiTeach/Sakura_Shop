@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakura Shop — Новинки</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" rel="product.css">
+
+  
+</head>
+
+<body>
+
+  <!-- Hidden radios for filters -->
+  <input type="radio" name="filter" id="f1" class="filter-radio" checked>
+  <input type="radio" name="filter" id="f2" class="filter-radio">
+  <input type="radio" name="filter" id="f3" class="filter-radio">
+  <input type="radio" name="filter" id="f4" class="filter-radio">
+  <input type="radio" name="filter" id="f5" class="filter-radio">
+
+  <!-- Hidden radios for sort -->
+  <input type="radio" name="sort" id="s1" class="sort-radio" checked>
+  <input type="radio" name="sort" id="s2" class="sort-radio">
+  <input type="radio" name="sort" id="s3" class="sort-radio">
+
+  <!-- Hidden radios for timeline -->
+  <input type="radio" name="timeline" id="tl1" class="tl-radio" checked>
+  <input type="radio" name="timeline" id="tl2" class="tl-radio">
+  <input type="radio" name="timeline" id="tl3" class="tl-radio">
+
+  <!-- Cart toggle -->
+  <input type="checkbox" class="cart-toggle" id="cartToggle">
+  <div class="cart-overlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <span class="cart-title">Кошик</span>
+        <label for="cartToggle" class="cart-close" style="cursor:pointer;">✕</label>
+      </div>
+      <div class="cart-item">
+        <div class="cart-item-img">🌸</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">Фігурка Jinshi</div>
+          <div class="cart-item-series">The Apothecary Diaries</div>
+          <div class="cart-item-price">₴890</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <div class="cart-item-img">⚔️</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">Меч Tanjiro Kamado</div>
+          <div class="cart-item-series">Demon Slayer</div>
+          <div class="cart-item-price">₴1 240</div>
+        </div>
+      </div>
+      <div class="cart-total">
+        <span>Разом</span>
+        <span>₴2 130</span>
+      </div>
+      <a href="#" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:1rem;">Оформити замовлення</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo">桜 <span>Sakura</span> Shop</a>
+    <nav>
+      <a href="#categories">Категорії</a>
+      <a href="products.html">Товари</a>
+      <a href="new.htnml">Новинки</a>
+      <a href="#">Про нас</a>
+    </nav>
+    <div class="nav-icon">
+      <a href="#">Пошук ↗</a>
+      <label for="cartToggle" style="cursor:pointer;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--fog);transition:color 0.3s;" data-tip="2 товари">
+      Кошик (2)
+    </label>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-text">
+      <span class="hero-label">Оновлення каталогу</span>
+      <h1 class="page-hero-title">Нові<br><em>надходження</em><br>сезону</h1>
+      <p class="page-hero-sub">Щотижневі поповнення від улюблених серій. Оригінальна японська продукція — першими серед підписників.</p>
+      <div>
+        <a href="#new-grid" class="btn-primary">Дивитись усі</a>
+        <a href="#weekly" class="btn-outline">Хіт тижня</a>
+      </div>
+    </div>
+    <div class="page-hero-visual">
+      <span class="page-hero-bg">新</span>
+      <div class="page-hero-badge">Нові сьогодні</div>
+      <div class="page-hero-cards">
+        <div class="phc">
+          <span class="phc-emoji"><img src="https://static.posters.cz/image/1300/258584.jpg" height="125px" width="100px"</span>
+          <span class="phc-label">Demon Slayer</span>
+          <div class="phc-price">₴1 340</div>
+        </div>
+        <div class="phc">
+          <span class="phc-emoji"><img src="https://posterior.ru/products/detailed/31/sailor-moon-27-%5Ba2%5D.jpg" height="125px" width="100px"</span>
+          <span class="phc-label">Sailor Moon</span>
+          <div class="phc-price">₴920</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="marquee-dot"></span>Нові надходження щотижня</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Оригінальна японська продукція</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Безкоштовна доставка від 1500 грн</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Гарантія автентичності</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Нові надходження щотижня</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Оригінальна японська продукція</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Безкоштовна доставка від 1500 грн</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Гарантія автентичності</span>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-section" id="new-grid">
+    <div class="filter-bar">
+      <span class="filter-lbl-text">Фільтр:</span>
+      <label for="f1" class="filter-label fb1">Всі</label>
+      <label for="f2" class="filter-label fb2">Фігурки</label>
+      <label for="f3" class="filter-label fb3">Манґа</label>
+      <label for="f4" class="filter-label fb4">Одяг</label>
+      <label for="f5" class="filter-label fb5">Аксесуари</label>
+    </div>
+  </div>
+
+  <!-- SORT ROW -->
+  <div class="sort-row">
+    <span class="sort-count">Показано <span>24</span> товари</span>
+    <div class="sort-options">
+      <span class="sort-lbl-text">Сортувати:</span>
+      <label for="s1" class="sort-btn sb1">Новіші</label>
+      <label for="s2" class="sort-btn sb2">Ціна ↑</label>
+      <label for="s3" class="sort-btn sb3">Популярні</label>
+    </div>
+  </div>
+
+  <!-- NEW ARRIVALS GRID -->
+  <section class="new-section">
+
+    <!-- ALL -->
+    <div class="new-grid-all">
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge">Сьогодні</span>
+          <span class="product-wishlist">♡</span>
+         🏮
+        </div>
+        <div class="arrival-date">02 квітня 2025</div>
+        <div class="product-name">Фігурка Rengoku Kyojuro</div>
+        <div class="product-series">Demon Slayer</div>
+        <div class="product-price">₴1 340</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge">Сьогодні</span>
+          <span class="product-wishlist">♡</span>
+          🌙
+        </div>
+        <div class="arrival-date">02 квітня 2025</div>
+        <div class="product-name">Фігурка Sailor Moon Crystal</div>
+        <div class="product-series">Sailor Moon</div>
+        <div class="product-price">₴920</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge new-badge">Новинка</span>
+          <span class="product-wishlist">♡</span>
+          🐉
+        </div>
+        <div class="arrival-date">01 квітня 2025</div>
+        <div class="product-name">Фігурка Zoro Roronoa</div>
+        <div class="product-series">One Piece</div>
+        <div class="product-price"><s>₴1 600</s> ₴1 280</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-wishlist">♡</span>
+          📖
+        </div>
+        <div class="arrival-date">01 квітня 2025</div>
+        <div class="product-name">Jujutsu Kaisen том 1–5</div>
+        <div class="product-series">Gege Akutami</div>
+        <div class="product-price">₴1 900</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge new-badge">Новинка</span>
+          <span class="product-wishlist">♡</span>
+          👘
+        </div>
+        <div class="arrival-date">30 берез. 2025</div>
+        <div class="product-name">Худі Konoha Village</div>
+        <div class="product-series">Naruto</div>
+        <div class="product-price">₴780</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-wishlist">♡</span>
+          💎
+        </div>
+        <div class="arrival-date">30 берез. 2025</div>
+        <div class="product-name">Кулон «Sharingan»</div>
+        <div class="product-series">Naruto Shippuden</div>
+        <div class="product-price">₴340</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge new-badge">Новинка</span>
+          <span class="product-wishlist">♡</span>
+          🗡️
+        </div>
+        <div class="arrival-date">28 берез. 2025</div>
+        <div class="product-name">Фігурка Levi Ackerman</div>
+        <div class="product-series">Attack on Titan</div>
+        <div class="product-price">₴1 120</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-wishlist">♡</span>
+          📗
+        </div>
+        <div class="arrival-date">28 берез. 2025</div>
+        <div class="product-name">Chainsaw Man том 1–4</div>
+        <div class="product-series">Tatsuki Fujimoto</div>
+        <div class="product-price">₴1 560</div>
+      </a>
+    </div>
+
+    <!-- FIGURES -->
+    <div class="new-grid-fig">
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge">Сьогодні</span>
+          <span class="product-wishlist">♡</span>
+          🏮
+        </div>
+        <div class="arrival-date">02 квітня 2025</div>
+        <div class="product-name">Фігурка Rengoku Kyojuro</div>
+        <div class="product-series">Demon Slayer</div>
+        <div class="product-price">₴1 340</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge">Сьогодні</span>
+          <span class="product-wishlist">♡</span>
+          🌙
+        </div>
+        <div class="arrival-date">02 квітня 2025</div>
+        <div class="product-name">Фігурка Sailor Moon Crystal</div>
+        <div class="product-series">Sailor Moon</div>
+        <div class="product-price">₴920</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge new-badge">Новинка</span>
+          <span class="product-wishlist">♡</span>
+          🐉
+        </div>
+        <div class="arrival-date">01 квітня 2025</div>
+        <div class="product-name">Фігурка Zoro Roronoa</div>
+        <div class="product-series">One Piece</div>
+        <div class="product-price"><s>₴1 600</s> ₴1 280</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge new-badge">Новинка</span>
+          <span class="product-wishlist">♡</span>
+          🗡️
+        </div>
+        <div class="arrival-date">28 берез. 2025</div>
+        <div class="product-name">Фігурка Levi Ackerman</div>
+        <div class="product-series">Attack on Titan</div>
+        <div class="product-price">₴1 120</div>
+      </a>
+    </div>
+
+    <!-- MANGA -->
+    <div class="new-grid-manga">
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-wishlist">♡</span>
+          📖
+        </div>
+        <div class="arrival-date">01 квітня 2025</div>
+        <div class="product-name">Jujutsu Kaisen том 1–5</div>
+        <div class="product-series">Gege Akutami</div>
+        <div class="product-price">₴1 900</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-wishlist">♡</span>
+          📗
+        </div>
+        <div class="arrival-date">28 берез. 2025</div>
+        <div class="product-name">Chainsaw Man том 1–4</div>
+        <div class="product-series">Tatsuki Fujimoto</div>
+        <div class="product-price">₴1 560</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge new-badge">Новинка</span>
+          <span class="product-wishlist">♡</span>
+          📕
+        </div>
+        <div class="arrival-date">25 берез. 2025</div>
+        <div class="product-name">Blue Lock том 1–3</div>
+        <div class="product-series">Muneyuki Kaneshiro</div>
+        <div class="product-price">₴1 200</div>
+      </a>
+    </div>
+
+    <!-- CLOTHING -->
+    <div class="new-grid-cloth">
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge new-badge">Новинка</span>
+          <span class="product-wishlist">♡</span>
+          👘
+        </div>
+        <div class="arrival-date">30 берез. 2025</div>
+        <div class="product-name">Худі Konoha Village</div>
+        <div class="product-series">Naruto</div>
+        <div class="product-price">₴780</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-wishlist">♡</span>
+          👕
+        </div>
+        <div class="arrival-date">26 берез. 2025</div>
+        <div class="product-name">Футболка Survey Corps</div>
+        <div class="product-series">Attack on Titan</div>
+        <div class="product-price">₴520</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-wishlist">♡</span>
+          🧢
+        </div>
+        <div class="arrival-date">24 берез. 2025</div>
+        <div class="product-name">Кепка Straw Hat Pirates</div>
+        <div class="product-series">One Piece</div>
+        <div class="product-price">₴390</div>
+      </a>
+    </div>
+
+    <!-- ACCESSORIES -->
+    <div class="new-grid-acc">
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-wishlist">♡</span>
+          💎
+        </div>
+        <div class="arrival-date">30 берез. 2025</div>
+        <div class="product-name">Кулон «Sharingan»</div>
+        <div class="product-series">Naruto Shippuden</div>
+        <div class="product-price">₴340</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-badge new-badge">Новинка</span>
+          <span class="product-wishlist">♡</span>
+          🎴
+        </div>
+        <div class="arrival-date">27 берез. 2025</div>
+        <div class="product-name">Постер набір A3 — Hashira</div>
+        <div class="product-series">Demon Slayer</div>
+        <div class="product-price">₴460</div>
+      </a>
+      <a href="#" class="product-card">
+        <div class="product-img">
+          <span class="product-wishlist">♡</span>
+          🎒
+        </div>
+        <div class="arrival-date">24 берез. 2025</div>
+        <div class="product-name">Рюкзак Hidden Leaf</div>
+        <div class="product-series">Naruto</div>
+        <div class="product-price">₴890</div>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- WEEKLY HIGHLIGHT -->
+  <div class="weekly-section" id="weekly">
+    <div class="section-label">Обране</div>
+    <div class="section-title">Хіт тижня</div>
+    <div class="weekly-inner">
+      <div class="weekly-img">
+        <span class="weekly-bg-text">剣</span>
+        <span class="weekly-emoji">⚔️</span>
+      </div>
+      <div class="weekly-info">
+        <div class="weekly-label">Ексклюзив · Demon Slayer</div>
+        <div class="weekly-title">Фігурка Tanjiro Kamado — Final Battle Ver.</div>
+        <div class="weekly-series">Demon Slayer: Kimetsu no Yaiba · Ufotable</div>
+        <p class="weekly-desc">Колекційна фігурка висотою 28 см у фінальній бойовій позі. Деталізоване промальовування кімоно, меч з ефектом полум'я. Обмежений тираж — 500 шт.</p>
+        <div class="weekly-price-row">
+          <span class="weekly-price">₴2 490</span>
+          <span class="weekly-price-old">₴2 900</span>
+        </div>
+        <div class="weekly-stock">Залишилось 23 штуки</div>
+        <div>
+          <a href="#" class="btn-primary">Додати до кошика</a>
+          <a href="#" class="btn-outline">Детальніше</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <section class="timeline-section">
+    <div class="section-label">Графік</div>
+    <div class="section-title">Надходження по датах</div>
+    <div class="timeline">
+      <div class="timeline-col-dates">
+        <div class="timeline-date-item tdi1">
+          <label for="tl1">
+            <div class="tdi-week">Цього тижня</div>
+            <div class="tdi-date">1–2 квітня</div>
+            <div class="tdi-count">6 товарів</div>
+          </label>
+        </div>
+        <div class="timeline-date-item tdi2">
+          <label for="tl2">
+            <div class="tdi-week">Минулий тиждень</div>
+            <div class="tdi-date">24–30 берез.</div>
+            <div class="tdi-count">11 товарів</div>
+          </label>
+        </div>
+        <div class="timeline-date-item tdi3">
+          <label for="tl3">
+            <div class="tdi-week">Два тижні тому</div>
+            <div class="tdi-date">17–23 берез.</div>
+            <div class="tdi-count">9 товарів</div>
+          </label>
+        </div>
+      </div>
+      <div class="timeline-col-items">
+        <div class="tl-panel tlp1">
+          <div class="tl-items-grid">
+            <div class="tl-item">
+              <div class="tl-item-img">🏮</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Фігурка Rengoku Kyojuro</div>
+                <div class="tl-item-series">Demon Slayer</div>
+                <div class="tl-item-price">₴1 340</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">🌙</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Фігурка Sailor Moon Crystal</div>
+                <div class="tl-item-series">Sailor Moon</div>
+                <div class="tl-item-price">₴920</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">🐉</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Фігурка Zoro Roronoa</div>
+                <div class="tl-item-series">One Piece</div>
+                <div class="tl-item-price">₴1 280</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">📖</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Jujutsu Kaisen том 1–5</div>
+                <div class="tl-item-series">Gege Akutami</div>
+                <div class="tl-item-price">₴1 900</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">⚔️</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Tanjiro Final Battle Ver.</div>
+                <div class="tl-item-series">Demon Slayer</div>
+                <div class="tl-item-price">₴2 490</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">🌸</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Фігурка Jinshi</div>
+                <div class="tl-item-series">Apothecary Diaries</div>
+                <div class="tl-item-price">₴890</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tl-panel tlp2">
+          <div class="tl-items-grid">
+            <div class="tl-item">
+              <div class="tl-item-img">👘</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Худі Konoha Village</div>
+                <div class="tl-item-series">Naruto</div>
+                <div class="tl-item-price">₴780</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">💎</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Кулон «Sharingan»</div>
+                <div class="tl-item-series">Naruto Shippuden</div>
+                <div class="tl-item-price">₴340</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">🗡️</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Фігурка Levi Ackerman</div>
+                <div class="tl-item-series">Attack on Titan</div>
+                <div class="tl-item-price">₴1 120</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">📗</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Chainsaw Man том 1–4</div>
+                <div class="tl-item-series">Tatsuki Fujimoto</div>
+                <div class="tl-item-price">₴1 560</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">🎴</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Постер набір A3 — Hashira</div>
+                <div class="tl-item-series">Demon Slayer</div>
+                <div class="tl-item-price">₴460</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">🎒</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Рюкзак Hidden Leaf</div>
+                <div class="tl-item-series">Naruto</div>
+                <div class="tl-item-price">₴890</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tl-panel tlp3">
+          <div class="tl-items-grid">
+            <div class="tl-item">
+              <div class="tl-item-img">🤖</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Фігурка Gundam RX-78</div>
+                <div class="tl-item-series">Mobile Suit Gundam</div>
+                <div class="tl-item-price">₴2 100</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">📕</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Blue Lock том 1–3</div>
+                <div class="tl-item-series">Muneyuki Kaneshiro</div>
+                <div class="tl-item-price">₴1 200</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">👕</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Футболка Survey Corps</div>
+                <div class="tl-item-series">Attack on Titan</div>
+                <div class="tl-item-price">₴520</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">🧢</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Кепка Straw Hat Pirates</div>
+                <div class="tl-item-series">One Piece</div>
+                <div class="tl-item-price">₴390</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">🦊</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Фігурка Naruto Uzumaki</div>
+                <div class="tl-item-series">Naruto Shippuden</div>
+                <div class="tl-item-price">₴760</div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-item-img">🌸</div>
+              <div class="tl-item-info">
+                <div class="tl-item-name">Фігурка Sakura</div>
+                <div class="tl-item-series">Cardcaptor Sakura</div>
+                <div class="tl-item-price">₴890</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <div class="section-label">Клуб</div>
+    <div class="section-title">Дізнавайся першим</div>
+    <p>Підпишись та отримуй сповіщення про нові надходження раніше за всіх — ексклюзивно для підписників.</p>
+    <div class="email-row">
+      <input type="email" placeholder="твій@email.com">
+      <button type="button">Підписатись</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">桜 <span>Sakura</span> Shop</a>
+        <p class="footer-desc">Офіційний аніме магазин в Україні. Оригінальна продукція з Японії. З любов'ю до аніме з 2019 року.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Магазин</h4>
+        <ul>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Новинки</a></li>
+          <li><a href="#">Розпродаж</a></li>
+          <li><a href="#">Передзамовлення</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Інформація</h4>
+        <ul>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Повернення</a></li>
+          <li><a href="#">Гарантія</a></li>
+          <li><a href="#">Контакти</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Серії</h4>
+        <ul>
+          <li><a href="#">Naruto</a></li>
+          <li><a href="#">One Piece</a></li>
+          <li><a href="#">Demon Slayer</a></li>
+          <li><a href="#">Attack on Titan</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Sakura Shop. Всі права захищено.</span>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
